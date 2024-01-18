@@ -37,7 +37,7 @@ export const NewBannerImageForm: React.FC<Props> = (props: Props) => {
   });
 
   const { control, handleSubmit, reset, setValue, watch } =
-    bannerImageFormMethods;
+   methods;
   const { fields, append, remove } = useFieldArray({
     control,
     name: "bannerImageData",
@@ -56,7 +56,7 @@ export const NewBannerImageForm: React.FC<Props> = (props: Props) => {
       remove(index);
     }
   };
-  const onSubmitBannerImageData = handleSubmit(async (data) => {
+  const onSubmitData = handleSubmit(async (data) => {
     setLoading(true);
     try {
       const res = await saveBannerImage(data!);
@@ -76,8 +76,8 @@ export const NewBannerImageForm: React.FC<Props> = (props: Props) => {
       open={open}
       title="Agregar Banner"
       submitButtonText="Guardar"
-      onSubmit={onSubmitBannerImageData}
-      methods={bannerImageFormMethods}
+      onSubmit={onSubmitData}
+      methods={methods}
       showError={false}
       errorMsg=""
       isSubmitting={loading}
