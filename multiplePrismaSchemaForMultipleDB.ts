@@ -61,3 +61,20 @@ generator client {
 
   // To run in console type npm run prisma1 or prisma2
 
+// try catch to use in connect and disconnect to database, to avoid multiple connections at the same time
+
+try {
+  prismaRafflesOneClient.$connect();
+} catch (error) {
+  console.error(error);
+} finally {
+  prismaRafflesOneClient.$disconnect();
+}
+ try {
+    prismaRafflesTwoClient.$connect();
+  } catch (error) {
+    console.error(error);
+  } finally {
+    prismaRafflesTwoClient.$disconnect();
+  }
+
