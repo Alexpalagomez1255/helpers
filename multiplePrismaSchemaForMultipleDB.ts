@@ -4,7 +4,7 @@
 
 import { PrismaClient } from "./prisma/folder/for/schemaClient";
 const prisma = new PrismaClient();
-
+// Before runing a new migration, delete migrations folder to avoid problems saving new schema in db
 // Command to run migration for specified schema --->  npx prisma migrate dev --schema prisma/schema2.prisma
 
 // Procedure to import a new Prisma Client in Node.js
