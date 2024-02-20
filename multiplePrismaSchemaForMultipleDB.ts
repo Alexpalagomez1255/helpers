@@ -24,7 +24,7 @@ const prisma = new PrismaClient();
 // Schema 1
 generator client {
     provider = "prisma-client-js"
-    output   = "./clients/rafflesone-client"
+    output   = "./clients/dbNo1-client"
   }
   
   datasource db {
@@ -40,7 +40,7 @@ model Table {
 
 generator client {
     provider = "prisma-client-js"
-    output   = "./clients/rafflestwo-client" // --> output for schema prisma client for the specified database related in the .env, from this folder you call the new prisma client to create the new prisma instance
+    output   = "./clients/dbNo2-client" // --> output for schema prisma client for the specified database related in the .env, from this folder you call the new prisma client to create the new prisma instance
   }
   
   datasource db {
