@@ -78,3 +78,6 @@ try {
     prismaRafflesTwoClient.$disconnect();
   }
 
+Refer to next Link to understand a better way: 
+https://github.com/prisma/prisma/issues/2443#issuecomment-630679118
+
